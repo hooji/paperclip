@@ -25,6 +25,8 @@ export const queryKeys = {
     configRevisions: (agentId: string) => ["agents", "config-revisions", agentId] as const,
     adapterModels: (companyId: string, adapterType: string) =>
       ["agents", companyId, "adapter-models", adapterType] as const,
+    detectModel: (companyId: string, adapterType: string) =>
+      ["agents", companyId, "detect-model", adapterType] as const,
   },
   issues: {
     list: (companyId: string) => ["issues", companyId] as const,
@@ -48,6 +50,7 @@ export const queryKeys = {
     liveRuns: (issueId: string) => ["issues", "live-runs", issueId] as const,
     activeRun: (issueId: string) => ["issues", "active-run", issueId] as const,
     workProducts: (issueId: string) => ["issues", "work-products", issueId] as const,
+    relations: (issueId: string) => ["issues", "relations", issueId] as const,
   },
   routines: {
     list: (companyId: string) => ["routines", companyId] as const,
